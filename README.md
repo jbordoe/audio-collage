@@ -23,8 +23,9 @@ Run `python collage_files.py --help` for more details.
 ## Examples
 
 Let's begin with two breakbats:
-Black Heat [Zimba Ku](docs/audio/breaks/black_heat__zimba_ku.wav) [source](https://www.youtube.com/watch?v=mybkf-H8mkA)
-The Winstons [Amen Brother](docs/audio/breaks/amen_brother.wav) [source](https://www.youtube.com/watch?v=GxZuq57_bYM)
+
+* Black Heat [Zimba Ku](docs/audio/breaks/black_heat__zimba_ku.wav) ([source](https://www.youtube.com/watch?v=mybkf-H8mkA))
+* The Winstons [Amen Brother](docs/audio/breaks/amen_brother.wav) ([source](https://www.youtube.com/watch?v=GxZuq57_bYM))
 
 We want to recrreate the drum pattern of the former using audio from the latter.
 
