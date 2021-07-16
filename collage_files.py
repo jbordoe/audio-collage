@@ -19,6 +19,8 @@ parser.add_argument(
     '-f', '--declick_fn', type=str, choices=['sigmoid', 'linear'], required=False, help='Decklicking function.')
 parser.add_argument(
     '-o', '--outpath', type=str, required=False, default='./collage.wav', help='Path of output file.')
+parser.add_argument(
+    '-w', '--windows', type=str, required=True, help='Comma-separated list of audio snippet sizes in ms')
 
 args = parser.parse_args()
 
@@ -40,7 +42,11 @@ sample_audio = util.Util.read_audio(samplefile)
 
 samples = {}
 
-windows = [500,200,100,50]
+if args.windows:
+    # TODO: validate args.windows
+    windows = [int(n) for n in args.windows.split(',')]
+else:
+    windows = [400,200,100,50,25]
 windows = [i + declick_ms for i in windows]
 
 print('Chopping sample file.')

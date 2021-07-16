@@ -88,7 +88,8 @@ class Util:
 
     @staticmethod
     def audio_dist(a1, a2):
-        return Util.dist(a1.chroma_stft, a2.chroma_stft)
+        #return Util.dist(a1.chroma_stft, a2.chroma_stft) * Util.dist(a1.mfcc, a2.mfcc)
+        return Util.dist(a1.mfcc, a2.mfcc)
 
     @staticmethod
     def dist(mfcc1, mfcc2):
